@@ -16,13 +16,13 @@ const BlogLink = styled(Link)`
 `
 
 const IndexPage = ({ data }) => {
-  console.log(data)
+  // console.log(data)
   return (
     <Layout>
       <Seo title="Home" />
       <div>
         <h1>Sergei's Thoughts</h1>
-        <h4>{data.allMarkdownRemark.totalCount}</h4>
+        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <BlogLink to={node.fields.slug}>
